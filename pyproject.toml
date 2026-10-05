@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bibsync"
+dynamic = ["version"]
+description = "Keep BibTeX entries identical to their INSPIRE-HEP, DOI and arXiv records"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Nils Vu", email = "owls@nilsvu.de" }]
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32"]
+optional-dependencies = { test = ["pytest"], dev = ["pytest", "black"] }
+scripts = { bibsync = "bibsync:main" }
+
+[tool.setuptools]
+py-modules = ["bibsync"]
+
+[tool.setuptools.dynamic]
+version = { attr = "bibsync.__version__" }

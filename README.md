@@ -1,7 +1,14 @@
 # bibsync
 
 Keeps BibTeX entries identical to their records in online databases, so no
-bibliographic field is typed by hand (or by an AI agent).
+bibliography data is typed by hand (or by an AI agent). You can tell this
+to AI agents (or put it in your AGENTS.md):
+
+```md
+Use https://github.com/nilsvu/bibsync for editing .bib files. Never write bibliography data yourself.
+```
+
+## Functionality
 
 Pulls entries from these databases, in this order:
 
